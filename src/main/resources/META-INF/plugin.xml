@@ -16,4 +16,11 @@
     <applicationListeners>
         <listener class="com.github.tomatofrieslan.accessibleai.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
     </applicationListeners>
+    <actions>
+        <action id="com.github.tomatofrieslan.accessibleai.action.ToggleCaretNavigationAction"
+                class="com.github.tomatofrieslan.accessibleai.action.ToggleCaretNavigationAction"
+                text="Toggle Caret Navigation">
+            <keyboard-shortcut keymap="$default" first-keystroke="alt F7"/>
+        </action>
+    </actions>
 </idea-plugin>
