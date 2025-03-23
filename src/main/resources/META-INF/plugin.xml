@@ -5,6 +5,7 @@
     <vendor>tomatofrieslan</vendor>
 
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.ml.llm</depends>
 
     <resource-bundle>messages.MyBundle</resource-bundle>
 

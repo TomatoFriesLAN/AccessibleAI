@@ -42,6 +42,7 @@ dependencies {
 
         // Plugin Dependencies. Uses `platformPlugins` property from the gradle.properties file for plugin from JetBrains Marketplace.
         plugins(providers.gradleProperty("platformPlugins").map { it.split(',') })
+        plugin("com.intellij.ml.llm:243.23654.270.16")
 
         instrumentationTools()
         pluginVerifier()
