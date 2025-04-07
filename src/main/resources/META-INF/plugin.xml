@@ -11,16 +11,22 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <toolWindow factoryClass="com.github.tomatofrieslan.accessibleai.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+        <notificationGroup id="Accessible AI Notifications" displayType="BALLOON" key="com.github.tomatofrieslan.accessibleai"/>
     </extensions>
 
     <applicationListeners>
         <listener class="com.github.tomatofrieslan.accessibleai.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
     </applicationListeners>
     <actions>
-        <action id="com.github.tomatofrieslan.accessibleai.action.ToggleCaretNavigationAction"
-                class="com.github.tomatofrieslan.accessibleai.action.ToggleCaretNavigationAction"
-                text="Toggle Caret Navigation">
-            <keyboard-shortcut keymap="$default" first-keystroke="alt F7"/>
+        <action id="com.github.tomatofrieslan.accessibleai.action.FollowLinkAction"
+                class="com.github.tomatofrieslan.accessibleai.action.FollowLinkAction"
+                text="Follow Link">
+            <keyboard-shortcut keymap="$default" first-keystroke="alt F11"/>
+        </action>
+        <action id="com.github.tomatofrieslan.accessibleai.action.CreateTestNotificationAction"
+                class="com.github.tomatofrieslan.accessibleai.action.CreateTestNotificationAction"
+                text="Create Test Notification" description="Creates a notification for testing purposes.">
+            <keyboard-shortcut keymap="$default" first-keystroke="alt F5"/>
         </action>
     </actions>
 </idea-plugin>
