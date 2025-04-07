@@ -29,7 +29,7 @@ public class FollowLinkAction extends AnAction {
                 Messages.getInformationIcon());
 
          */
-        JEditorPane messagePart = ((TextPartViewEditorPane) KeyboardNavigationService.getAIAssistantChatMessageView(currentProject, 0).getMessage().getAllParts().get(0).getComponent());
+        JEditorPane messagePart = ((TextPartViewEditorPane) KeyboardNavigationService.getAIAssistantChatMessageView(currentProject, 1).getMessage().getAllParts().get(0).getComponent());
         HTMLDocument document = ((HTMLDocument) messagePart.getDocument());
         HTMLDocument.Iterator iterator = document.getIterator(HTML.Tag.A);
         int startOffset = iterator.getStartOffset();

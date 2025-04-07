@@ -28,6 +28,6 @@ public class KeyboardNavigationService {
     }
 
     public static AIAssistantChatMessageView getAIAssistantChatMessageView(Project project, int index) {
-        return (AIAssistantChatMessageView) KeyboardNavigationService.getAIAssistantChatPanel(project).getMessages().get(1).getMessageSelector().getMessageView();
+        return (AIAssistantChatMessageView) KeyboardNavigationService.getAIAssistantChatPanel(project).getMessages().get(index).getMessageSelector().getMessageView();
     }
 }
