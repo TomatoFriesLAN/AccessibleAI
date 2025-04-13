@@ -10,8 +10,11 @@ import org.jetbrains.annotations.NotNull;
 
 import javax.swing.*;
 import javax.swing.event.HyperlinkEvent;
+import javax.swing.text.AttributeSet;
 import javax.swing.text.html.HTML;
 import javax.swing.text.html.HTMLDocument;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 public class FollowLinkAction extends AnAction {
     public @NotNull ActionUpdateThread getActionUpdateThread() {
@@ -33,7 +36,14 @@ public class FollowLinkAction extends AnAction {
         HTMLDocument document = ((HTMLDocument) messagePart.getDocument());
         HTMLDocument.Iterator iterator = document.getIterator(HTML.Tag.A);
         int startOffset = iterator.getStartOffset();
+        //messagePart.hasFocus();
         //Element element = document.getCharacterElement(messagePart.getCaretPosition());
-        messagePart.fireHyperlinkUpdate(new HyperlinkEvent(messagePart, HyperlinkEvent.EventType.ACTIVATED, null, "is this working", document.getCharacterElement(startOffset)));
+        URL url;
+        try {
+            url = new URL((String) iterator.getAttributes().getAttribute(HTML.Attribute.HREF));
+        } catch (MalformedURLException e) {
+            url = null;
+        }
+        messagePart.fireHyperlinkUpdate(new HyperlinkEvent(messagePart, HyperlinkEvent.EventType.ACTIVATED, url, "is this working", document.getCharacterElement(startOffset)));
     }
 }
