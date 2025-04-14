@@ -19,7 +19,7 @@
         <action id="com.github.tomatofrieslan.accessibleai.action.FollowLinkAction"
                 class="com.github.tomatofrieslan.accessibleai.action.FollowLinkAction"
                 text="Follow Link">
-            <keyboard-shortcut keymap="$default" first-keystroke="alt F11"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift G"/>
         </action>
         <action id="com.github.tomatofrieslan.accessibleai.action.CreateTestNotificationAction"
                 class="com.github.tomatofrieslan.accessibleai.action.CreateTestNotificationAction"
