@@ -16,15 +16,15 @@
     <applicationListeners>
     </applicationListeners>
     <actions>
-        <action id="com.github.tomatofrieslan.accessibleai.action.FollowLinkAction"
-                class="com.github.tomatofrieslan.accessibleai.action.FollowLinkAction"
-                text="Follow Link">
+        <action id="com.github.tomatofrieslan.accessibleai.action.FollowHoveredLinkAction"
+                class="com.github.tomatofrieslan.accessibleai.action.FollowHoveredLinkAction"
+                text="Follow Hovered Link">
             <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift G"/>
         </action>
-        <action id="com.github.tomatofrieslan.accessibleai.action.CreateTestNotificationAction"
-                class="com.github.tomatofrieslan.accessibleai.action.CreateTestNotificationAction"
-                text="Create Test Notification" description="Creates a notification for testing purposes.">
-            <keyboard-shortcut keymap="$default" first-keystroke="alt F5"/>
+        <action id="com.github.tomatofrieslan.accessibleai.action.FollowLinkAction"
+                class="com.github.tomatofrieslan.accessibleai.action.FollowLinkAction"
+                text="Follow Link" description="Displays a menu containing all of the links in the current AI chat session.">
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt G"/>
         </action>
     </actions>
 </idea-plugin>
