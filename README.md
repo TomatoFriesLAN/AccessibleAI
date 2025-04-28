@@ -17,11 +17,11 @@
 - [ ] Click the <kbd>Watch</kbd> button on the top of the [IntelliJ Platform Plugin Template][template] to be notified about releases containing new features and fixes.
 
 <!-- Plugin description -->
-This Fancy IntelliJ Platform Plugin is going to be your implementation of the brilliant ideas that you have.
+Improves keyboard navigation in the JetBrains AI Assistant plugin by providing keyboard-only means of following links.
 
-This specific section is a source for the [plugin.xml](/src/main/resources/META-INF/plugin.xml) file which will be extracted by the [Gradle](/build.gradle.kts) during the build process.
+Use Ctrl+Shift+G to follow the link under the caret or Ctrl+Alt+G to open a menu listing all links in the current AI chat session.
 
-To keep everything working, do not remove `<!-- ... -->` sections. 
+Not affiliated with JetBrains or the JetBrains AI Assistant.
 <!-- Plugin description end -->
 
 ## Installation

@@ -31,47 +31,6 @@ public class FollowLinkAction extends QuickSwitchSchemeAction {
         return ActionUpdateThread.BGT;
     }
 
-    /*
-    @Override
-    public void actionPerformed(@NotNull AnActionEvent e) {
-        Project project = e.getProject();
-
-        FocusManager focusManager = FocusManager.getCurrentManager();
-
-        Notification notification = new Notification("Accessible AI Notifications", "Test notification", focusManager.getFocusOwner().toString(), NotificationType.INFORMATION);
-        notification.addAction(new OpenSettingsAction(KeymapPanel.class, "Keymap...", AllIcons.General.Settings));
-
-        Notifications.Bus.notify(notification);
-
-        ListPopup popup = JBPopupFactory.getInstance().createActionGroupPopup(
-                "getPopupTitle(e)", new DefaultActionGroup(), e.getDataContext(), JBPopupFactory.ActionSelectionAid.ALPHA_NUMBERING, true, null, -1,
-                null, "what is this");
-
-        List<AIMessageSelectViewProcessorHolder> messages = KeyboardNavigationService.getAIAssistantChatPanel(project).getMessages();
-
-
-        for (AIMessageSelectViewProcessorHolder message : messages) {
-            List<MessagePartView> parts = ((AIAssistantChatMessageViewModel) message).getAllParts();
-            for (MessagePartView part : parts) {
-                Component messagePart = part.getComponent();
-                if (messagePart instanceof TextPartViewEditorPane textPart) {
-                    HTMLDocument document = ((HTMLDocument) textPart.getDocument());
-                    HTMLDocument.Iterator iterator = document.getIterator(HTML.Tag.A);
-                    while (iterator.isValid()) {
-
-                    }
-                }
-            }
-        }
-
-        if (project != null) {
-            popup.showCenteredInCurrentWindow(project);
-        }
-
-    }
-
-     */
-
     @Override
     protected void fillActions(Project project, @NotNull DefaultActionGroup group, @NotNull DataContext dataContext) {
         AIAssistantChatPanel chatPanel = KeyboardNavigationService.getAIAssistantChatPanel(project);
